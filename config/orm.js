@@ -6,6 +6,7 @@ function printQuestionMarks(num) {
   for (var i = 0; i < num; i++) {
     arr.push("?");
   }
+
   return arr.toString();
 }
 
@@ -17,6 +18,7 @@ function objToSql(ob) {
       arr.push(key + "=" + ob[key]);
     }
   }
+
   return arr.toString();
 }
 
@@ -36,6 +38,7 @@ var orm = {
     var query  = "INSERT INTO " + table + " ";
     query     += "("+ cols.toString() +") ";
     query     += "VALUES (" + printQuestionMarks(vals.length) + ")";
+    console.log(query);
 
     connection.query(query, vals, function(err, result) {
       if (err) {
@@ -62,6 +65,7 @@ var orm = {
   updateAll: function (table, obj, cb) {
     var query   = "UPDATE " + table + " ";
     query      += "SET " + objToSql(obj) + " ";
+    console.log(query);
 
     connection.query(query, function(err, result) {
       if (err) {
@@ -74,6 +78,7 @@ var orm = {
   deleteOne: function (table, condition, cb) {
     var query   = "DELETE FROM " + table + " ";
     query      += "WHERE " + condition;
+    console.log(query);
 
     connection.query(query, function(err, result) {
       if (err) {
@@ -83,6 +88,6 @@ var orm = {
     });
   }
 
-};
+}; 
 
 module.exports = orm;
