@@ -1,0 +1,60 @@
+<div class="addBurger">
+  <h3>What's the name of your burger?</h3>
+  <div class="container">
+    <form action="/" method="POST">
+      <div class="form-group row align-items-center">
+        <label for="input" class="col-sm-2 col-form-label"><strong>Burger Name:</strong></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" name="burgerName" id="burgerName" placeholder="e.g. Double KING™DURR® Sandwich" required>
+        </div>
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-primary">Make It Now</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="burgers row">
+
+  <div class="col-sm-12 col-md-6 toBeEaten">
+    <h2 class="nCenter">Ready to Devour</h2>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <div class="burger row">
+      <div class="col-6">
+        <span class="h5" id="ready{{id}}">{{burger_name}}</span>
+      </div>
+      <div class="col-6">
+        <form action="/?_method=PUT" method="POST">
+          <button class="btn btn-success btn-sm">Devour It</button>
+          <input type="hidden" name="id" value="{{id}}">
+        </form>
+      </div>
+    </div> 
+    {{/unless}}
+    {{/each}}
+
+  </div> 
+
+  <div class="col-sm-12 col-md-6 eaten">
+    <h2 class="tRight">Already Eaten</h2>
+    {{#each burgers}}
+    {{#if devoured}}
+    <div class="burger row">
+      <div class="col-6">
+        <form action="/?_method=DELETE" method="POST">
+          <button class="btn btn-danger btn-sm">Delete It</button>
+          <input type="hidden" name="deleteId" value="{{id}}">
+        </form>
+      </div>
+      <div class="col-6 tRight">
+        <span class="h5 tRight" id="eaten{{id}}">{{burger_name}}</span>
+      </div>
+    </div>
+    {{/if}}
+    {{/each}}
+
+  </div> 
+
+</div>

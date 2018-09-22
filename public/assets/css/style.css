@@ -1,0 +1,60 @@
+html, body, * {
+  font-family: 'Varela Round', sans-serif !important; 
+  background: rgb(218, 247, 115);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  text-align: center; }
+
+.nCenter{
+  text-align: left;
+}
+
+.tRight{
+  text-align: right;
+}
+
+.btn-primary {
+  background:red;
+  border-color: red;
+}
+
+.btn-success {
+  margin-left: 62%;
+}
+
+.btn-primary:hover {
+  background:rgb(123, 192, 12);
+  border-color: rgb(123, 192, 12);
+}
+
+
+.container {
+  padding: 2rem 2rem 1rem 2rem; }
+
+header img {
+  max-width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto; }
+
+@media screen and (min-width: 768px) {
+  .addBurger, .burgers {
+    padding: 0 4rem; } }
+
+.addBurger {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc; }
+
+.burgers .row {
+  margin-bottom: 1rem; }
+
+.burgers h2 {
+  margin-bottom: 1rem; }
+
+footer {
+  padding: 2rem 0;
+  margin: 2rem 0;
+  border-top: 1px solid #ccc; }
