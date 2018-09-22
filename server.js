@@ -1,20 +1,22 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var PORT = process.env.PORT || 3000;
-var app = express();
+let express = require("express");
+let bodyParser = require("body-parser");
+let methodOverride = require("method-override");
+let PORT = process.env.PORT || 8080;
+let app = express();
+
+require('dotenv').config().
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride("_method", ["POST", "GET"]));
 
-var exphbs = require("express-handlebars");
+let exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-var routes = require("./controllers/burgers_controller.js");
+let routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
