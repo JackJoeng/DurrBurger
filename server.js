@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 var app = express();
 app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method", ["POST", "GET"]));
 var exphbs = require("express-handlebars");
 
@@ -18,4 +18,6 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port);
+app.listen(PORT, function() {
+    console.log("App listening on http://localhost:" + PORT);
+  });
