@@ -1,6 +1,6 @@
 # DurrBurger
 
-DurrBurger is burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). It follows the MVC design pattern, uses Node and MySQL to query and route data in the app, and Handlebars to generate your HTML.
+DurrBurger is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). It follows the MVC design pattern, uses Node and MySQL to query and route data in the app, and Handlebars to generate your HTML.
 
 ![](public/assets/images/logo2.jpg)
 
