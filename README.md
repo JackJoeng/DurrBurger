@@ -1,9 +1,8 @@
 # DurrBurger
-http://durrbg.herokuapp.com/
 
 DurrBurger is burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). It follows the MVC design pattern, uses Node and MySQL to query and route data in the app, and Handlebars to generate your HTML.
 
-![](public/assets/images/logo2.png)
+![](public/assets/images/logo2.jpg)
 
 * This is a restaurant app that lets users input the names of burgers they'd like to eat.
 
@@ -65,7 +64,7 @@ DurrBurger is burger logger with MySQL, Node, Express, Handlebars and a homemade
 
 ## Authors
 
-* **Jack Yang** - *HTML/JS/jQuery/Node.js* - [Github](https://github.com/JackJoeng)
+* **Jack Yang** - [Github](https://github.com/JackJoeng)
 
 
 
